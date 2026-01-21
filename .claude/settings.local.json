@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(pnpm dev:*)",
+      "Bash(timeout:*)",
+      "Bash(Remove-Item \"C:\\\\Users\\\\amine\\\\Desktop\\\\portofolio\\\\my-app\\\\src\\\\app\\\\favicon.ico\" -Force)",
+      "Bash(git remote add:*)",
+      "Bash(git add:*)"
+    ]
+  }
+}
