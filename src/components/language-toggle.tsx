@@ -18,8 +18,9 @@ export function LanguageToggle({ className = "" }: { className?: string }) {
       whileTap={{ scale: 0.95 }}
       aria-label={`Switch to ${language === "fr" ? "English" : "French"}`}
     >
-      <span className="text-base">{language === "fr" ? "🇫🇷" : "🇬🇧"}</span>
-      <span>{language === "fr" ? "FR" : "EN"}</span>
+    <span className="text-base">{language === "fr" ? "🇬🇧" : "🇫🇷"}</span>
+    <span>{language === "fr" ? "EN" : "FR"}</span>
+
     </motion.button>
   );
 }
@@ -55,10 +56,11 @@ export function LanguageToggleMobile() {
       aria-label={`Switch to ${language === "fr" ? "English" : "French"}`}
     >
       <div className="flex flex-col items-center">
-        <span className="text-xl">{language === "fr" ? "🇫🇷" : "🇬🇧"}</span>
-        <span className="text-[10px] font-bold mt-0.5">
-          {language === "fr" ? "FR" : "EN"}
-        </span>
+      <span className="text-xl">{language === "fr" ? "🇬🇧" : "🇫🇷"}</span>
+      <span className="text-[10px] font-bold mt-0.5">
+        {language === "fr" ? "EN" : "FR"}
+      </span>
+
       </div>
     </motion.button>
   );
