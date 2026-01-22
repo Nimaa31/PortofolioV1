@@ -96,7 +96,7 @@ export function Services() {
               const Icon = service.icon;
               return (
                 <motion.div
-                  key={service.key}
+                  key={`${service.key}-${language}`}
                   variants={itemVariants}
                   transition={{ delay: index * 0.1 }}
                 >

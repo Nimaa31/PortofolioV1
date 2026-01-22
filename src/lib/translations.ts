@@ -86,6 +86,50 @@ export const translations = {
       subtitle: "Une progression constante vers l'excellence technique",
       experienceTitle: "Expériences",
       educationTitle: "Formation",
+      items: {
+        exp1: {
+          title: "Développeur Fullstack & DevOps",
+          company: "Cloud4Dev",
+          type: "Alternance Bachelor",
+          description:
+            "Conception et déploiement d'applications cloud-native en environnement Agile. Automatisation des pipelines CI/CD réduisant le temps de déploiement de 60%. Mise en place d'une architecture microservices conteneurisée servant +10K utilisateurs.",
+        },
+        exp2: {
+          title: "Développeur Web Freelance",
+          company: "Clients variés",
+          type: "Entrepreneur",
+          description:
+            "Accompagnement de 8+ clients (PME, startups, artisans) dans leur transformation digitale. Livraison de solutions sur-mesure avec un taux de satisfaction de 100%. Expertise en optimisation SEO ayant généré +150% de trafic organique pour mes clients.",
+        },
+        exp3: {
+          title: "Développeur Backend",
+          company: "Projet E-commerce",
+          type: "Projet certifiant",
+          description:
+            "Développement d'une plateforme e-commerce complète avec gestion des stocks, panier, paiement Stripe et back-office administrateur. Architecture MVC respectant les standards SOLID et les bonnes pratiques de sécurité OWASP.",
+        },
+        exp4: {
+          title: "Développeur Web Junior",
+          company: "Stage en entreprise",
+          type: "Stage 6 semaines",
+          description:
+            "Intégration au sein d'une équipe de 5 développeurs sur un projet client. Contribution au développement de fonctionnalités front-end et participation aux revues de code. Introduction aux méthodologies Agile/Scrum.",
+        },
+      },
+      education: {
+        edu1: {
+          title: "Développeur Full Stack - Data & Devops",
+          school: "LiveCampus",
+        },
+        edu2: {
+          title: "BTS services informatiques aux organisations",
+          school: "Toulouse • Option SLAM",
+        },
+        edu3: {
+          title: "Baccalauréat STI2D",
+          school: "Lycée Déodat de Séverac • Option SIN",
+        },
+      },
     },
 
     // Contact Section
@@ -253,6 +297,50 @@ export const translations = {
       subtitle: "A constant progression towards technical excellence",
       experienceTitle: "Experience",
       educationTitle: "Education",
+      items: {
+        exp1: {
+          title: "Fullstack Developer & DevOps",
+          company: "Cloud4Dev",
+          type: "Bachelor Apprenticeship",
+          description:
+            "Design and deployment of cloud-native applications in Agile environment. CI/CD pipeline automation reducing deployment time by 60%. Implementation of containerized microservices architecture serving 10K+ users.",
+        },
+        exp2: {
+          title: "Freelance Web Developer",
+          company: "Various clients",
+          type: "Entrepreneur",
+          description:
+            "Supported 8+ clients (SMBs, startups, craftsmen) in their digital transformation. Delivered custom solutions with 100% satisfaction rate. SEO optimization expertise generating +150% organic traffic for clients.",
+        },
+        exp3: {
+          title: "Backend Developer",
+          company: "E-commerce Project",
+          type: "Certification Project",
+          description:
+            "Development of a complete e-commerce platform with inventory management, cart, Stripe payment and admin back-office. MVC architecture following SOLID standards and OWASP security best practices.",
+        },
+        exp4: {
+          title: "Junior Web Developer",
+          company: "Company Internship",
+          type: "6-week Internship",
+          description:
+            "Integration within a team of 5 developers on a client project. Contribution to front-end feature development and code review participation. Introduction to Agile/Scrum methodologies.",
+        },
+      },
+      education: {
+        edu1: {
+          title: "Full Stack Developer - Data & Devops",
+          school: "LiveCampus",
+        },
+        edu2: {
+          title: "IT Services to Organizations Certificate",
+          school: "Toulouse • Software Development Track",
+        },
+        edu3: {
+          title: "STI2D High School Diploma",
+          school: "Lycée Déodat de Séverac • Digital Systems Track",
+        },
+      },
     },
 
     // Contact Section

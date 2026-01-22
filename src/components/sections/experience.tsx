@@ -3,13 +3,46 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import { experiences, education } from "@/lib/data";
+import { Briefcase, GraduationCap, Rocket } from "lucide-react";
 import { useLanguage } from "@/components/language-provider";
+
+const experienceData = [
+  {
+    key: "exp1",
+    period: "2024 - 2025",
+    icon: Rocket,
+    technologies: ["React", "Symfony", "Docker", "Jenkins", "Kubernetes", "GitLab CI"],
+  },
+  {
+    key: "exp2",
+    period: "2023 - 2024",
+    icon: Briefcase,
+    technologies: ["React", "Next.js", "Vue.js", "Node.js", "WordPress", "SEO"],
+  },
+  {
+    key: "exp3",
+    period: "2022 - 2023",
+    icon: GraduationCap,
+    technologies: ["PHP 8", "Symfony 6", "Doctrine ORM", "MySQL", "API Platform"],
+  },
+  {
+    key: "exp4",
+    period: "2022",
+    icon: Briefcase,
+    technologies: ["HTML5", "CSS3", "JavaScript", "PHP", "Git"],
+  },
+];
+
+const educationData = [
+  { key: "edu1", period: "2024 - 2025", icon: GraduationCap },
+  { key: "edu2", period: "2022 - 2024", icon: GraduationCap },
+  { key: "edu3", period: "2019 - 2020", icon: GraduationCap },
+];
 
 export function Experience() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -82,11 +115,12 @@ export function Experience() {
                 <div className="absolute left-[19px] top-0 bottom-0 w-0.5 bg-gradient-to-b from-blue-500 to-blue-700" />
 
                 <div className="space-y-8">
-                  {experiences.map((exp, index) => {
+                  {experienceData.map((exp, index) => {
                     const Icon = exp.icon;
+                    const expTranslation = t.experience.items[exp.key as keyof typeof t.experience.items];
                     return (
                       <motion.div
-                        key={index}
+                        key={`${exp.key}-${language}`}
                         variants={itemVariants}
                         className="relative pl-12"
                       >
@@ -102,17 +136,17 @@ export function Experience() {
                               {exp.period}
                             </span>
                             <span className="px-2 py-0.5 bg-blue-100 dark:bg-blue-900/50 text-blue-700 dark:text-blue-300 text-xs rounded-full">
-                              {exp.type}
+                              {expTranslation.type}
                             </span>
                           </div>
                           <h4 className="text-lg font-bold text-gray-900 dark:text-white mb-1">
-                            {exp.title}
+                            {expTranslation.title}
                           </h4>
                           <p className="text-gray-600 dark:text-gray-400 text-sm mb-3">
-                            {exp.company}
+                            {expTranslation.company}
                           </p>
                           <p className="text-gray-600 dark:text-gray-300 text-sm mb-4">
-                            {exp.description}
+                            {expTranslation.description}
                           </p>
                           <div className="flex flex-wrap gap-2">
                             {exp.technologies.map((tech) => (
@@ -173,11 +207,12 @@ export function Experience() {
                 <div className="absolute left-[19px] top-0 bottom-0 w-0.5 bg-gradient-to-b from-blue-500 to-blue-700" />
 
                 <div className="space-y-6">
-                  {education.map((edu, index) => {
+                  {educationData.map((edu, index) => {
                     const Icon = edu.icon;
+                    const eduTranslation = t.experience.education[edu.key as keyof typeof t.experience.education];
                     return (
                       <motion.div
-                        key={index}
+                        key={`${edu.key}-${language}`}
                         variants={itemVariants}
                         className="relative pl-12"
                       >
@@ -192,10 +227,10 @@ export function Experience() {
                             {edu.period}
                           </span>
                           <h4 className="text-lg font-bold text-gray-900 dark:text-white mt-1">
-                            {edu.title}
+                            {eduTranslation.title}
                           </h4>
                           <p className="text-gray-600 dark:text-gray-400 text-sm">
-                            {edu.school}
+                            {eduTranslation.school}
                           </p>
                         </div>
                       </motion.div>
